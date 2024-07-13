@@ -3,13 +3,10 @@ const divTarefas = document.querySelector('#tarefas')
 botaoAdd.addEventListener('click',()=>{
     const tarefas = document.querySelector("#addInput").value
     const checkbox = document.createElement('input')
-    if(!tarefas){
-        alert("Preencha o campo das tarefas")
-    }else{
     checkbox.type = 'checkbox'
     const li = document.createElement('li')
     li.textContent = tarefas
-    }
+    
     checkbox.addEventListener('change', ()=>{
         if(checkbox.checked){
             li.style.textDecoration = "line-through"
